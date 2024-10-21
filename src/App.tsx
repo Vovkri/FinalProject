@@ -1,15 +1,15 @@
 import React, { useState, useEffect } from 'react';
 import './App.css';
-import MenuComponent from './components/menu';
-import InputComponent from './components/input';
-import ButtonFiltersComponent from './components/buttonfilters';
-import ListComponent from './components/list';
-import LineComponent from './components/line';
-import ButtonIconComponent from './components/buttonicon';
-import CheckboxComponent from './components/checkbox';
-import InfoBox from './components/searchcard';
-import ListItemComponent from './components/listItem';
-import Pagination from './components/pagination';
+import MenuComponent from './components/Menu';
+import InputComponent from './components/Input';
+import ButtonFiltersComponent from './components/ButtonFilters';
+import ListComponent from './components/List';
+import LineComponent from './components/Line';
+import ButtonIconComponent from './components/ButtonIcon';
+import CheckboxComponent from './components/Checkbox';
+import InfoBox from './components/SearchCard';
+import ListItemComponent from './components/ListItem';
+import Pagination from './components/Pagination';
 
 import { ReactComponent as IconTask} from './svg/tasks.svg';
 import { ReactComponent as IconSettings} from './svg/settings.svg';
