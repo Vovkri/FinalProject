@@ -10,6 +10,7 @@ import CheckboxComponent from './components/checkbox';
 import InfoBox from './components/searchcard';
 import ListItemComponent from './components/listItem';
 import Pagination from './components/pagination';
+import SelectComponent from './components/select';
 
 import { ReactComponent as IconTask} from './svg/tasks.svg';
 import { ReactComponent as IconSettings} from './svg/settings.svg';
@@ -43,6 +44,20 @@ function App() {
     console.log("Кнопка нажата!");
     
 };
+const [selectedValue, setSelectedValue] = useState('');
+
+const handleSelectChange = (value: string) => {
+    setSelectedValue(value);
+    console.log("Выбрано значение:", value);
+};
+
+const options = [
+    { value: '', label: 'Выберите опцию' },
+    { value: 'option1', label: 'Опция 1' },
+    { value: 'option2', label: 'Опция 2' },
+    { value: 'option3', label: 'Опция 3 с длинным длинным предлинным текстом' },
+    { value: 'option4', label: 'Опция 4' },
+];
 const [currentPage, setCurrentPage] = useState<number>(2);
   const [itemsPerPage, setItemsPerPage] = useState<number>(5);
   const [isChecked1, setIsChecked1] = useState(true);
@@ -114,6 +129,14 @@ const totalPages = 3;
         <IconForder />
         
         </div>
+        <SelectComponent 
+                label="Выберите элемент" 
+                options={options} 
+                value={selectedValue} 
+                onChange={handleSelectChange} 
+                required={1}
+                additionalLabel="Дополнительная информация"
+            />
         <LineComponent label ="Разделитель2" />
         <InfoBox mainText = {'Text Text Text Text'} additionalText = {'Поиск карточки (шаг 1)'} onClose={handleCancel} More={handleMore}></InfoBox>
         <Pagination 
