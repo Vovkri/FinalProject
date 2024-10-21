@@ -34,6 +34,7 @@ import { ReactComponent as IconDrowdownSqure} from './svg/drowdownSqure.svg';
 import { ReactComponent as IconDrowdownSqureOpen} from './svg/drowdownSqure-open.svg';
 import { ReactComponent as IconSome} from './svg/some_icon.svg';
 import { ReactComponent as IconForder} from './svg/folderinput.svg';
+import FolderInputComponent from './components/folderInput';
 
 
 
@@ -124,7 +125,7 @@ const totalPages = 3;
           
         }} 
       />
-
+      <FolderInputComponent label={"Метка"} additionalLabel='Вспомогательный текст' required={1} placeholder='Выбранная опция'></FolderInputComponent>
       <MenuComponent></MenuComponent>
     </div>
   );
